@@ -1,5 +1,9 @@
+map.txt
 *~
 *#*
 .obj
 kernel.bin
 os.iso
+xorriso-*.tar.gz
+xorriso-*/
+

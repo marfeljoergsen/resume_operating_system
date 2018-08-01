@@ -1,17 +1,18 @@
-sources : 
-http://mikeos.sourceforge.net/write-your-own-os.html 
-http://os.phil-opp.com/multiboot-kernel.html 
-http://wiki.osdev.org/Bare_bones 
-http://www.cs.vu.nl/~herbertb/misc/writingkernels.txt
-
-================================
 To boot up the iso: 
   qemu-system-i386 -cdrom os.iso
+
+From the original documentation:
+  make run-bin   : to run from qemu
+  make build-iso : to build an iso file with grub. It needs xorriso.
+  make run-iso   : launch qemu with iso file as a CDROM.
 ----
 Prerequisite: The "xorriso"-tool:
 Download it from: https://www.gnu.org/software/xorriso/#download
-Extract it under the current working dir, e.g. ./xorriso-1.4.8/
----------------------------------------------------------------------
+(or maybe check into https://github.com/clearlinux-pkgs/xorriso or
+https://github.com/clearlinux-pkgs/xorriso/blob/master/xorriso.spec )
+
+Move/extract it under the current working dir, e.g. ./xorriso-1.4.8/
+=============================================================================
 
 Build necessary files:
 ./configure --prefix=/home/martin/Downloads/resume_operating_system/
@@ -47,5 +48,11 @@ ISO image produced: 9914 sectors
 Written to medium : 9914 sectors at LBA 0
 Writing to 'stdio:os.iso' completed successfully.
 --------------------------
+
+sources : 
+http://mikeos.sourceforge.net/write-your-own-os.html 
+http://os.phil-opp.com/multiboot-kernel.html 
+http://wiki.osdev.org/Bare_bones 
+http://www.cs.vu.nl/~herbertb/misc/writingkernels.txt
 
 
